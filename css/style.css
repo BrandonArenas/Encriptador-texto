@@ -1,16 +1,33 @@
+html[data-tema="oscuro"] {
+    --colorfondo: #000000;
+    --colortextop: #ffffff;
+    --colortextarea: #cac7c7;
+}
+
+html {
+    --colorfondo: #ffffff;
+    --colortexto: #000000;
+    --colortextop: #000000;
+    --colorbotones: #e5ff72;
+    --colorbtnhover: #7ec850;
+}
+
 * {
     font-family: Arial, Helvetica, sans-serif;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    transition: all 0.3s;
 }
 
 body {
+    background-color: var(--colorfondo);
     display: flex;
     justify-content: center;
     align-items: center;
     min-height: 100vh;
     gap: 100px;
+    
 }
 
 #img {
@@ -22,11 +39,12 @@ textarea {
     margin: 10px 0;
     font-size: 16px;
     border: 1px solid #ccc;
-    outline-color: #0056b3;
+    outline-color: var(--colorbtnhover);
     border-radius: 5px;
     resize: none;
+    background-color: var(--colorfondo);
+    color: var(--colortextop);
 }
-
 
 #entradaTexto {
     width: 400px;
@@ -48,25 +66,37 @@ textarea {
     width: 400px;
     height: 400px;
     display: none;
+    padding: 10px;
+}
+
+#contenedor-texto {
+    text-align: center;
+    color: var(--colortextop);
 }
 
 button {
     padding: 10px 20px;
     margin: 10px 5px;
     font-size: 16px;
-    color: #fff;
-    background-color: #007bff;
+    background-color: var(--colorbotones);
+    color: var(--colortexto);
     border: none;
     border-radius: 5px;
     cursor: pointer;
 }
 
 button:hover {
-    background-color: #0056b3;
+    background-color: var(--colorbtnhover);
 }
 
 #btnCopiar {
     display: none;
+}
+
+#btnCambiarTema {
+    position: absolute;
+    top: 0;
+    left: 0;
 }
 
 @media (max-width: 768px) {
@@ -84,6 +114,7 @@ button:hover {
 
     #contenedor-entrada {
         width: 100%;
+        margin-top: 30px;
     }
 
     #contenedor-salida {

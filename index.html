@@ -14,6 +14,8 @@
 </head>
 
 <body>
+    <button id="btnCambiarTema">Cambiar tema</button>
+
     <div id="contenedor-entrada">
         <textarea id="entradaTexto" placeholder="Introduce tu texto aquí"></textarea>
         <div id="contenedor-botones">
@@ -23,12 +25,12 @@
     </div>
 
     <div id="contenedor-salida">
-        <textarea id="salidaTexto" placeholder="El resultado aparecera aquí"></textarea>
+        <textarea id="salidaTexto" placeholder="El resultado aparecera aquí" readonly></textarea>
         <button onclick="copiar()" id="btnCopiar">Copiar</button>
-        <img src="img/img.PNG" id="img" alt="Imagen">
+        <img src="img/img.svg" id="img" alt="Imagen">
         <div id="contenedor-texto">
-            <b><p style="text-align: center;">No se ingreso texto</p></b>
-            <p style="text-align: center;">Ingresa el texto que desees encriptar o desencriptar</p>
+            <b><p>No se ingreso texto</p></b>
+            <p>Ingresa el texto que desees encriptar o desencriptar</p>
         </div>
     </div>
     <script src="js/app.js"></script>

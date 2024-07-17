@@ -13,7 +13,7 @@ function encriptar() {
         .replace(/u/g, "ufat");
     document.getElementById("salidaTexto").value = textoEncriptado;
 
-    mostrarOcultar()
+    mostrar();
 }
 
 //Funcion para desencriptar el texto
@@ -31,7 +31,7 @@ function desencriptar() {
         .replace(/ufat/g, "u");
     document.getElementById("salidaTexto").value = textoDesencriptado;
 
-    mostrarOcultar()
+    mostrar();
 }
 
 //Limpiar la caja de texto
@@ -53,12 +53,20 @@ function validarTexto(texto) {
     return true;
 }
 
-function mostrarOcultar() {
+function mostrar() {
     let btnCopiar = document.getElementById("btnCopiar").style.display = "block";
     let img = document.getElementById("img").style.display = "none";
     let ctnTexto = document.getElementById("contenedor-texto").style.display = "none";
     let salidaTexto = document.getElementById("salidaTexto").style.display = "block";
     let ctnSalida = document.getElementById("contenedor-salida").style.border = "none"; 
+}
+
+function ocultar() {
+    let btnCopiar = document.getElementById("btnCopiar").style.display = "none";
+    let img = document.getElementById("img").style.display = "block";
+    let ctnTexto = document.getElementById("contenedor-texto").style.display = "block";
+    let salidaTexto = document.getElementById("salidaTexto").style.display = "none";
+    let ctnSalida = document.getElementById("contenedor-salida").style.border = "1px solid #ccc"; 
 }
 
 //Funcion para copiar
@@ -76,7 +84,32 @@ function copiar() {
         text: 'Copiado!'
     });
 
-    // Limpiar las cajas de texto
-    limpiarCajaDeTexto();
+    ocultar();
+    limpiarCajaDeTexto()
 }
+
+function agregarTema() {
+    let btnCambiarTema = document.getElementById("btnCambiarTema");
+    btnCambiarTema.addEventListener ("click", () => {
+        let nuevoTema = obtenerTema (temaActual);
+        cambiarTema (nuevoTema);
+        temaActual = nuevoTema;
+    }) 
+}
+
+function cambiarTema(tema) {
+    let etiquetaHtml = document.querySelector("html");
+    etiquetaHtml.setAttribute("data-tema", tema);
+}
+
+function obtenerTema(tema) {
+    if (tema === "oscuro") {
+        return "claro";
+    } else {
+        return "oscuro";
+    }
+}
+
+let temaActual = "claro";
+agregarTema();
 
