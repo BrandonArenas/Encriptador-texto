@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Encriptador de Texto</title>
+    <link href="css/style.css" rel="stylesheet" type="text/css" />
+    <!--Usamos sweetalert2 para mostrar un mensaje personalizado-->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+        integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</head>
+
+<body>
+    <div id="contenedor-entrada">
+        <textarea id="entradaTexto" placeholder="Introduce tu texto aquí"></textarea>
+        <div id="contenedor-botones">
+            <button onclick="encriptar()">Encriptar</button>
+            <button onclick="desencriptar()">Desencriptar</button>
+        </div>
+    </div>
+
+    <div id="contenedor-salida">
+        <textarea id="salidaTexto" placeholder="El resultado aparecera aquí"></textarea>
+        <button onclick="copiar()" id="btnCopiar">Copiar</button>
+        <img src="img/img.PNG" id="img" alt="Imagen">
+        <div id="contenedor-texto">
+            <b><p style="text-align: center;">No se ingreso texto</p></b>
+            <p style="text-align: center;">Ingresa el texto que desees encriptar o desencriptar</p>
+        </div>
+    </div>
+    <script src="js/app.js"></script>
+</body>
+
+</html>
