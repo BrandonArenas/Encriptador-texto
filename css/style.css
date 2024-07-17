@@ -121,6 +121,10 @@ button:hover {
         font-size: 18px;
     }
 
+    #salidaTexto {
+        padding: 10px
+    }
+
     #contenedor-salida {
         width: 600px;
         padding: 115px 0;
