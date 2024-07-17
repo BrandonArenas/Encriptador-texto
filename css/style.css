@@ -96,6 +96,29 @@ button:hover {
     }
 }
 
+@media (max-width: 1024px) {
+    body {
+        flex-direction: column;
+        gap: 50px;
+        padding: 20px;
+    }
+
+    #entradaTexto, #salidaTexto {
+        width: 80%;
+        height: 300px;
+    }
+
+    #contenedor-salida {
+        width: 80%;
+        padding: 40px;
+    }
+
+    #img {
+        width: 80%;
+        height: auto;
+    }
+}
+
 @media (max-width: 480px) {
     textarea {
         font-size: 14px;
