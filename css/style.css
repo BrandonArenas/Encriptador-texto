@@ -18,6 +18,7 @@ html {
     padding: 0;
     box-sizing: border-box;
     transition: all 0.3s;
+    font-size: 25px;
 }
 
 body {
@@ -27,17 +28,14 @@ body {
     align-items: center;
     min-height: 100vh;
     gap: 100px;
-    
 }
 
 #img {
-    width: 300px;
-    height: 304px;
+    width: 100%;
+    height: 300px;
 }
 
 textarea {
-    margin: 10px 0;
-    font-size: 16px;
     border: 1px solid #ccc;
     outline-color: var(--colorbtnhover);
     border-radius: 5px;
@@ -47,27 +45,26 @@ textarea {
 }
 
 #entradaTexto {
-    width: 400px;
-    height: 400px;
+    width: 30vw;
+    height: 30vw;
     padding: 10px;
 }
 
 #contenedor-salida {
-    width: 400px;
-    padding: 60px 0;
+    width: 30vw;
+    height: 650px;
     border: 1px solid #ccc;
     border-radius: 5px;
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
 }
 
 #salidaTexto {
-    width: 400px;
-    height: 400px;
-    padding: 10px;
+    width: 100%;
+    height: 1000px;
     display: none;
-    padding: 10px;
 }
 
 #contenedor-texto {
@@ -78,7 +75,6 @@ textarea {
 button {
     padding: 10px 20px;
     margin: 10px 5px;
-    font-size: 16px;
     background-color: var(--colorbotones);
     color: var(--colortexto);
     border: none;
@@ -104,7 +100,7 @@ button:hover {
     body {
         flex-direction: column;
         gap: 20px;
-        padding: 20px;
+        padding: 40px;
     }
 
     #entradaTexto,
@@ -120,6 +116,7 @@ button:hover {
 
     #contenedor-salida {
         width: 100%;
+        height: auto;
     }
 
     #img {
@@ -129,8 +126,8 @@ button:hover {
 }
 
 @media (max-width: 480px) {
-    textarea {
-        font-size: 14px;
+    * {
+        font-size: 15px;
     }
 
     button {
