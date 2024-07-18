@@ -43,7 +43,6 @@ function limpiarCajaDeTexto() {
 //Funcion para validar el texto solo letras minúsculas sin acentos ni caracteres especiales
 function validarTexto(texto) {
     if (!/^[a-z\s]*$/.test(texto) || texto.trim() === "") {
-        limpiarCajaDeTexto();
         Swal.fire({
             icon: 'error',
             text: 'El texto debe contener solo letras minúsculas sin acentos ni caracteres especiales.'
